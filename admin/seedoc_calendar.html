@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<meta charset="UTF-8">
+<title>Replace SQL</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  * {box-sizing: border-box;}
+  ul {list-style-type: none;}
+  body {font-family: Verdana, sans-serif;}
+  
+  .month {
+    padding: 15px 25px;
+    width: 100%;
+    background: #607d8b;
+    text-align: center;
+  }
+  
+  .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .month .prev {
+    float: left;
+    padding-top: 10px;
+  }
+  
+  .month .next {
+    float: right;
+    padding-top: 10px;
+  }
+  
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+  }
+  
+  .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+  }
+  
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+  }
+  
+  .days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+  }
+  
+  /* Add media queries for smaller screens */
+  @media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+  }    
+  </style>
+
+<script src=""></script>
+
+<body class="w3-light-grey">
+
+<!-- Navigation -->    
+<div class="w3-bar w3-black">
+    <a href="index.html" class="w3-bar-item w3-button">Home </a>        
+</div>
+
+<!-- Main Div -->
+<div>
+
+<!-- Sidebar -->
+<div class="w3-bar-block w3-blue-grey w3-hide-small" style="width:20%; float:left; height:860px;">
+    <p class="w3-bar-item w3-text-black">Admin Menu:</p>
+    <a href="#" class="w3-bar-item w3-button">Clients</a>
+    <a href="#" class="w3-bar-item w3-button">Requests of clients</a>
+    <span class="w3-bar-item w3-text-black">Configure of docs: </span>
+    <a href="#" class="w3-bar-item w3-button ">Specializations</a>
+    <a href="#" class="w3-bar-item w3-button ">Doc's time</a>
+    <a href="#" class="w3-bar-item w3-button ">Calendar of all Docs</a>
+    <a href="#" class="w3-bar-item w3-button ">Link</a>
+</div>
+
+<!-- Main Content -->
+<div class="w3-container w3-light-grey w3-mobile" style="width: 80%; float:left;">
+    <h2>See Doc calendar</h2>
+
+    <p>Please, Choose Day.</p> 
+    
+    <div>
+
+        <p><b>A Spec</b></p>
+        <p><b>Matter Doc</b></p>
+
+          <div class="month">  
+
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>
+                August<br>
+                <span style="font-size:18px">2021</span>
+              </li>
+            </ul>
+          </div>
+          
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+          
+          <ul class="days">  
+            <li><a href="#" class="w3-button w3-padding-small">1</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">2</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">3</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">4</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">5</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">6</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">7</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">8</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">9</a></li>
+            <li><a href="#" class="w3-button w3-padding-small"><span class="active">10</span></a></li>
+            <li><a href="#" class="w3-button w3-padding-small">11</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">12</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">13</a></li>
+            <li><a href="setdoc_hours.html" class="w3-button w3-padding-small w3-text-black" ><b>14</b></a></li>
+            <li><a href="#" class="w3-button w3-padding-small">15</a></li>
+            <li><a href="setdoc_hours.html" class="w3-button w3-padding-small w3-text-black" ><b>16</b></a></li>
+            <li><a href="#" class="w3-button w3-padding-small">17</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">18</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">19</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">20</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">21</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">22</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">23</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">24</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">25</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">26</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">27</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">28</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">29</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">30</a></li>
+            <li><a href="#" class="w3-button w3-padding-small">31</a></li>
+          </ul>
+             
+    </div>
+    
+                    
+</div> <!-- End of Main Content -->
+
+  <!-- End of Main Div -->
+</div>
+
+<!-- Footer -->    
+<div class="w3-container w3-bar w3-black " style="margin-top: 860px; ">
+    <p><small>(c) 2022, greycrud</small></p>
+</div>
+
+</body>
+</html>

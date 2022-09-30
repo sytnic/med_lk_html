@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<meta charset="UTF-8">
+<title>Replace SQL</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+  * {box-sizing: border-box;}
+  ul {list-style-type: none;}
+  body {font-family: Verdana, sans-serif;}
+  
+  .month {
+    padding: 15px 25px;
+    width: 100%;
+    background: #607d8b;
+    text-align: center;
+  }
+  
+  .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  
+  .month .prev {
+    float: left;
+    padding-top: 10px;
+  }
+  
+  .month .next {
+    float: right;
+    padding-top: 10px;
+  }
+  
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+  }
+  
+  .weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+  }
+  
+  .days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+  }
+  
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #000;
+  }
+  
+  .days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+  }
+  
+  /* Add media queries for smaller screens */
+  @media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+  }
+  
+  @media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+  }
+  
+  @media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+  }    
+  </style>
+
+<script src=""></script>
+
+<body class="w3-light-grey">
+
+<!-- Navigation -->    
+<div class="w3-bar w3-black">
+    <a href="index.html" class="w3-bar-item w3-button">Home </a>        
+</div>
+
+<!-- Main Div -->
+<div>
+
+<!-- Sidebar -->
+<div class="w3-bar-block w3-blue-grey w3-hide-small" style="width:20%; float:left; height:860px;">
+    <p class="w3-bar-item w3-text-black">Admin Menu:</p>
+      <a href="#" class="w3-bar-item w3-button">Clients</a>
+      <a href="#" class="w3-bar-item w3-button">Requests of clients</a>
+    <span class="w3-bar-item w3-text-black">Configure of docs: </span>
+      <a href="#" class="w3-bar-item w3-button ">Specializations</a>
+      <a href="#" class="w3-bar-item w3-button ">Doc's time</a>
+      <a href="#" class="w3-bar-item w3-button w3-light-grey">Calendar of all Docs</a>
+      <a href="#" class="w3-bar-item w3-button ">Link</a>
+</div>
+
+<!-- Main Content -->
+<div class="w3-container w3-light-grey w3-mobile" style="width: 80%; float:left;">
+    <h2>Calendar of all</h2>
+    
+    <div>
+
+          <div class="month">  
+
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>
+                August<br>
+                <span style="font-size:18px">2021</span>
+              </li>
+            </ul>
+          </div>
+          
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+          
+          <ul class="days ">  
+            <li><a href="day.html?month=Aug&day=1" class="w3-button w3-padding-small "><b>1</b></a></li>
+            <li><a href="day.html?month=Aug&day=2" class="w3-button w3-padding-small ">2</a></li>
+            <li><a href="day.html?month=Aug&day=3" class="w3-button w3-padding-small ">3</a></li>
+            <li><a href="day.html?month=Aug&day=11" class="w3-button w3-padding-small "><b>4</b></a></li>
+            <li><a href="day.html?month=Aug&day=11" class="w3-button w3-padding-small "><b>5</b></a></li>
+            <li><a href="day.html?month=Aug&day=11" class="w3-button w3-padding-small "><b>6</b></a></li>
+            <li><a href="day.html?month=Aug&day=11" class="w3-button w3-padding-small ">7</a></li>
+            <li><a href="day.html?month=Aug&day=11" class="w3-button w3-padding-small ">8</a></li>
+            <li><a href="day.html?month=Aug&day=11" class="w3-button w3-padding-small ">9</a></li>
+            <li><a href="day.html?month=Aug&day=11" class="w3-button w3-padding-small "> <span class="active">10</span> </a></li>
+            <li><a href="day.html?month=Aug&day=11" class="w3-button w3-padding-small ">11</a></li>
+            <li><a href="day.html?month=Aug&day=12" class="w3-button w3-padding-small ">12</a></li>
+            <li><a href="day.html?month=Aug&day=13" class="w3-button w3-padding-small ">13</a></li>
+            <li><a href="day.html?month=Aug&day=14" class="w3-button w3-padding-small ">14</a></li>
+            <li><a href="day.html?month=Aug&day=15" class="w3-button w3-padding-small "><b>15</b></a></li>
+            <li><a href="day.html?month=Aug&day=16" class="w3-button w3-padding-small ">16</a></li>
+            <li><a href="day.html?month=Aug&day=17" class="w3-button w3-padding-small ">17</a></li>
+            <li><a href="day.html?month=Aug&day=18" class="w3-button w3-padding-small ">18</a></li>
+            <li><a href="day.html?month=Aug&day=19" class="w3-button w3-padding-small ">19</a></li>
+            <li><a href="day.html?month=Aug&day=20" class="w3-button w3-padding-small ">20</a></li>
+            <li><a href="day.html?month=Aug&day=21" class="w3-button w3-padding-small ">21</a></li>
+            <li><a href="day.html?month=Aug&day=22" class="w3-button w3-padding-small ">22</a></li>
+            <li><a href="day.html?month=Aug&day=23" class="w3-button w3-padding-small ">23</a></li>
+            <li><a href="day.html?month=Aug&day=24" class="w3-button w3-padding-small ">24</a></li>
+            <li><a href="day.html?month=Aug&day=25" class="w3-button w3-padding-small ">25</a></li>
+            <li><a href="day.html?month=Aug&day=26" class="w3-button w3-padding-small ">26</a></li>
+            <li><a href="day.html?month=Aug&day=27" class="w3-button w3-padding-small ">27</a></li>
+            <li><a href="day.html?month=Aug&day=28" class="w3-button w3-padding-small ">28</a></li>
+            <li><a href="day.html?month=Aug&day=29" class="w3-button w3-padding-small ">29</a></li>
+            <li><a href="day.html?month=Aug&day=30" class="w3-button w3-padding-small ">30</a></li>
+            <li><a href="day.html?month=Aug&day=31" class="w3-button w3-padding-small ">31</a></li>
+          </ul>
+          
+          <br>
+
+          <div class="month">  
+
+            <ul>
+              <li class="prev">&#10094;</li>
+              <li class="next">&#10095;</li>
+              <li>
+                September<br>
+                <span style="font-size:18px">2021</span>
+              </li>
+            </ul>
+          </div>
+          
+          <ul class="weekdays">
+            <li>Mo</li>
+            <li>Tu</li>
+            <li>We</li>
+            <li>Th</li>
+            <li>Fr</li>
+            <li>Sa</li>
+            <li>Su</li>
+          </ul>
+          
+          <ul class="days">  
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li><a href="#" class="w3-button w3-padding-small w3-text-bold w3-text-black" ><b>11</b></a></li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li><a href="#" class="w3-button w3-padding-small w3-text-black" ><b>16</b></a></li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+          </ul>
+   
+    </div>
+    
+                    
+</div> <!-- End of Main Content -->
+
+  <!-- End of Main Div -->
+</div>
+
+<!-- Footer -->    
+<div class="w3-container w3-bar w3-black " style="margin-top: 860px; ">
+    <p><small>(c) 2022, greycrud</small></p>
+</div>
+
+</body>
+</html>
